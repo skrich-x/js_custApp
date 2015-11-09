@@ -11,11 +11,56 @@ $medium-gray: #999;
 $light-gray: #ddd;
 $very-light-gray: #fafafa;
 
+$background-gray: #ececec;
+$feature-gray: #7d7d7d;
+$blue: #073768;
+$pale-blue: #416589;
+$purple: #300032;
+$teal: #6ed3cf;
+$red:#e62739;
+
 $base-font-color: $dark-gray;
 $base-background-color: $very-light-gray;
 
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 body {
   font-family: $base-font-family;
-  background-color: $base-background-color;
-  color: $base-font-color;
+  font-size: 62.5%;
+  background-color: #fff;
+}
+
+h1,h2,h3,h4,h5,h6{
+  margin:0;
+  text-align: center;
+}
+
+a{
+  text-decoration:none;
+}
+
+ul{
+  list-style: none;
+  padding-left: 0;
+}
+
+p{
+  font-size: 2em;
+}
+
+span{
+  font-size: 1.5em;
+}
+
+.center-container{
+  @include outer-container(1080px);
+}
+
+div.error{
+  color:$red;
+  font-size: 1.5em;
 }

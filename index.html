@@ -15,6 +15,53 @@
   </head>
   <body>
 
+  <section class="center-container">
+    <h1 class="header"></h1>
+
+    <form id="rsvp-form" name="rsvp-form" action "" method="post">
+
+      <div id="main-container">
+
+        <div class="section-header">
+          <h2 class="rsvp-header">Johnstone Supply RSVP</h2>
+        </div>
+
+        <ul class="info-fields" id="contact-info">
+
+          <li id="first-name">
+            <label> First Name </label>
+            <input id="first_name" name="first_name" maxlength="15" value="" type="text" placeholder="First Name" required>
+          </li>
+          <li id="last-name">
+            <label> Last Name </label>
+            <input id="last_name" name="last_name" maxlength="19" value="" type="text" placeholder="Last Name" required>
+          </li>
+
+          <li id="company-name">
+            <label>Company Name</label>
+            <input id="last_name" name="last_name" maxlength="30" value="" type="text" placeholder="Last Name" required>
+          </li>
+          <li id="shipping-lname">
+            <label>How many guests will be attending?</label>
+            <input name="last_name" value="" type="number" placeholder="# Attending" required>
+          </li>
+
+          <div class="column_2">
+
+            <li id="customer-phone">
+              <label>Phone</label>
+              <input id="phone" name="phone" maxlength="10" value="" type="text" placeholder="000-000-0000" required>
+            </li>
+          </div>
+
+        </ul>
+      </div>
+
+      <input class="submit-button" type="submit" value="Submit Form" />
+
+    </form>
+  </section>
+
   <!-- Third Party Scripts -->
   <script src="bower_components/commonjs-require/commonjs-require.js"></script>
   <script src="bower_components/jquery/dist/jquery.js"></script>
