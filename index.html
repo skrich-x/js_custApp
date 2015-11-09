@@ -35,22 +35,18 @@
 
         <ul class="info-fields" id="contact-info">
 
-          <li id="first-name">
+          <li id="full-name">
             <label> First Name </label>
-            <input id="first_name" name="first_name" maxlength="15" value="" type="text" placeholder="First Name" required>
-          </li>
-          <li id="last-name">
-            <label> Last Name </label>
-            <input id="last_name" name="last_name" maxlength="19" value="" type="text" placeholder="Last Name" required>
+            <input id="full_name" name="full_name" maxlength="50" value="" type="text" placeholder="Full Name" required>
           </li>
 
           <li id="company-name">
             <label>Company Name</label>
             <input id="last_name" name="last_name" maxlength="30" value="" type="text" placeholder="Company Name" required>
           </li>
-          <li id="shipping-lname">
+          <li id="attending">
             <label>How many guests will be attending?</label>
-            <input name="last_name" value="" type="number" placeholder="# Attending" required>
+            <input name="attending" value="" type="number" placeholder="# Attending" required>
           </li>
 
           <div class="column_2">
@@ -70,6 +66,9 @@
   </section>
 
   <!-- Third Party Scripts -->
+
+  <script src="http://www.parsecdn.com/js/parse-1.2.12.min.js"></script>
+
   <script src="bower_components/commonjs-require/commonjs-require.js"></script>
   <script src="bower_components/jquery/dist/jquery.js"></script>
   <script src="bower_components/underscore/underscore.js"></script>
