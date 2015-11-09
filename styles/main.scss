@@ -64,3 +64,47 @@ div.error{
   color:$red;
   font-size: 1.5em;
 }
+
+input{
+  width: 100%;
+  padding-top: .25em;
+  padding-bottom: .25em;
+  padding-left: .5em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  font-size: 2.5em;
+}
+
+.header{
+  color: $red;
+  font-size: 3em;
+}
+
+
+.rsvp-header{
+  margin-top: .5em;
+  font-size: 4em;
+  font-weight: 200;
+  color:$red;
+}
+
+.rsvp-form{
+  @include span-columns(6);
+  @include shift(3);
+  margin-top: 3em;
+  margin-bottom:1.5em;
+  background-color: $background-gray;
+  box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.5);
+  font-size: 1em;
+  border-radius: 3px;
+}
+
+.submit-button{
+    @include span-columns(4 of 6);
+    @include shift(1);
+    margin-bottom: .5em;
+    color: #fff;
+    background-color: $pale-blue;
+    border: 1px solid $feature-gray;
+    border-radius: 2px;
+  }
