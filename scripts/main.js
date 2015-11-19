@@ -2,72 +2,31 @@
   'use strict';
 
   $(document).ready(function(){
-    $('body').prepend(JST.application());
 
-    $('rsvp-form').on("submit",function(e){
-      e.preventDefault();
+  Parse.initialize("4GMr1b28Ptvx5QTqIffextxYstz416ZgjERoSiAC", "mTAhdElptaebxLTH82h41WUUUwJgVOou3JCec6kr");
 
-      console.log("Handling Submit");
+  var Attendee = Parse.Object.extend("Attendee");
 
-      var data = {};
-      data.name = $("#full-name").val();
-      data.company = $("#company-name").val();
-      data.attending = $("#attending").val();
-      data.phone = $("#phone").val();
+  $("#rsvp-form").submit(function(event){
+      event.preventDefault();
+        var firstName = $("#first-name").val();
+        var lastName = $("#last-name").val();
+        var company = $("#company-name").val();
+        var guests = $("#attending").val();
+        var phone = $("#customer-phone").val();
 
-    })
-  });
-})();
-//
-// $(document).ready(function() {
-//
-// 	$("#commentForm").on("submit", function(e) {
-// 		e.preventDefault();
-//
-// 		console.log("Handling the submit");
-// 		//add error handling here
-// 		//gather the form data
-//
-// 		var data = {};
-// 		data.name = $("#name").val();
-// 		data.email = $("#email").val();
-// 		data.area = $("#area option:selected").val();
-// 		data.comments = $("#comments").val();
-//
-// 	});
-//
-// });
-// <script>
-//         Parse.initialize("API KEY", "JAVASCRIPT KEY");
-//
-//         var ParseObj = Parse.Object.extend('myClass'); //create local parse object from your Parse class
-//
-//         $('#contact-form').submit(function(e) {
-//         //on form submit
-//             e.preventDefault();
-//
-//             //get data from form
-//             var data = {
-//                 fname: $("#fname").val(),
-//                 lname: $("#lname").val(),
-//                 email: $("#email").val()
-//             };
-//
-//             //create new Parse object
-//             parseObj = new ParseObj();
-//
-//             //match the key values from the form, to your parse class, then save it
-//             parseObj.save(data, {
-//                     //if successful
-//                     success: function(parseObj) {
-//                             alert(parseObj.get('fname') + " " + parseObj.get('lname') + " " + parseObj.get('email') + " saved to Parse.")
-//                         }
-//                     ,
-//                     error: function(parseObj, error) {
-//                         console.log(parseObj);
-//                         console.log(error);
-//                     }
-//                 }
-//             );
-//         });
-//     </script>
+        var newAttendee = new Attendee();
+        newAttendee.set("firstName", firstName);
+        newAttendee.set("lastName", lastName);
+        newAttendee.set("company", company);
+        newAttendee.set("guests", guests);
+        newAttendee.set("phone", phone);
+
+        newAttendee.save({
+          success: function (){
+            console.log("saved");
+          }, error: function(error){
+            console.log("Error:"+error.message);
+          }
+        });
+    });

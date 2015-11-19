@@ -14,56 +14,48 @@
     <script src="bower_components/modernizr/modernizr.js"></script>
   </head>
   <body>
+    <div class="main-container">
 
-  <section class="center-container">
-    <h1 class="header"></h1>
+    <div id="main">
 
-    <form id="rsvp-form" name="rsvp-form" action "" method="post">
-
-      <div id="johnstone-logo">
-        <img src="johnstone_full_Logo.jpg" alt="Johnstone's Logo"/>
-      </div>
-
-      <div id="main-container">
-
-
-
-        <div class="section-header">
           <h2 class="rsvp-header">Customer Appreciation RSVP</h2>
-        </div>
 
+          <form id="rsvp-form" name="rsvp-form">
+            <p>
+              <label> First Name </label>
+              <input id="first-name" name="first-name" maxlength="50" value="" type="text" placeholder="First Name" required>
+            </p>
 
-        <ul class="info-fields" id="contact-info">
+            <p>
+              <label> Last Name </label>
+              <input id="last-name" name="last-name" maxlength="50" value="" type="text" placeholder="Last Name" required>
+            </p>
 
-          <li id="full-name">
-            <label> First Name </label>
-            <input id="full_name" name="full_name" maxlength="50" value="" type="text" placeholder="Full Name" required>
-          </li>
+            <p>
+              <label>Company Name</label>
+              <input id="company-name" name="company-name" maxlength="30" value="" type="text" placeholder="Company Name" required>
+            </p>
 
-          <li id="company-name">
-            <label>Company Name</label>
-            <input id="last_name" name="last_name" maxlength="30" value="" type="text" placeholder="Company Name" required>
-          </li>
-          <li id="attending">
-            <label>How many guests will be attending?</label>
-            <input name="attending" value="" type="number" placeholder="# Attending" required>
-          </li>
+            <p>
+              <label>How many guests will be attending?</label>
+              <input id="attending" name="attending" value="" type="text" placeholder="# Attending" required>
+            </p>
 
-          <div class="column_2">
-
-            <li id="customer-phone">
+            <p>
               <label>Phone</label>
-              <input id="phone" name="phone" maxlength="10" value="" type="text" placeholder="000-000-0000" required>
-            </li>
-          </div>
+              <input id="customer-phone" name="customer-phone" maxlength="10" value="" type="text" placeholder="000-000-0000" required>
+            </p>
 
-        </ul>
+            <p>
+              <input id="rsvp-submit" class="submit-button" type="submit" value="Submit RSVP" />
+            </p>
+
+          </form>
+
       </div>
 
-      <input class="submit-button" type="submit" value="Submit RSVP" />
+  </div>
 
-    </form>
-  </section>
 
   <!-- Third Party Scripts -->
 

@@ -61,7 +61,7 @@ span{
   box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.25);
 }
 
-.center-container{
+#main-container{
   @include outer-container(1080px);
       margin-top: 3em;
       margin-bottom:1.5em;
@@ -100,7 +100,7 @@ input{
   color:$red;
 }
 
-#main-container{
+#main{
   @include span-columns(8);
   @include shift(2);
   margin-top: 3em;
